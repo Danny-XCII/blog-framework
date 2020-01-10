@@ -1,0 +1,22 @@
+header {
+    border-bottom: 2px solid #ff7f35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div {
+    padding: .75rem;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
