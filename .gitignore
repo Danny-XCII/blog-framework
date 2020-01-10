@@ -1,0 +1,5 @@
+# exclude everything
+content/uploads/*
+
+# exception to the rule
+!content/uploads/.gitkeep
