@@ -8,7 +8,7 @@ An MVC kinda framework for building simple blogs.
 
 *As of the initial commit, this can easily be used to build a fully functional blog. It will need
 a couple of additions if using the existing views. No post content shown yet but this can be added quite
-simply inside `views/post.view.php` by adding `$post->content` wherever you want it to go. A few buttons
+simply inside `views/post.view.php` by adding `<?= $post->content; ?>` wherever you want it to go. A few buttons
 in the admin panel don't do anything at the moment. Will need some optimisation for SEO - this is coming.*
 
 ***
