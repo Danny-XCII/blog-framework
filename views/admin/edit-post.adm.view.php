@@ -107,29 +107,9 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="/assets/js/rte.js"></script>
 
     <script>
-        var toolbarOptions = [
-
-            [ { "header" : [ 1, 2, 3, 4, 5, 6, false ] } ],
-
-            [ "bold", "italic", "underline" ],
-
-            [ { "list" : "ordered" }, { "list" : "bullet" } ],
-
-            [ "image", "code-block" ]
-
-        ];
-
-        var quill = new Quill( "#quill-editor", {
-
-            modules: {
-                syntax: true,
-                toolbar: toolbarOptions
-            },
-            theme: "snow"
-
-        });
 
         let form = document.querySelector( "#add-post-form" );
         let amendedContent = false;

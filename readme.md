@@ -85,4 +85,3 @@ views are fleshed out. Feels like bad code at the moment.
 - Lots of button functionality hasn't been added yet in the admin panel.
 - Create functions to manage settings from database and have `$app` retrieve these settings - make use of the admin page for settings.
 - ***ANYTHING ELSE THAT IS EMPTY OR NON-WORKING LINKS ETC ARE STUFF I'M WORKING ON STILL***
-
