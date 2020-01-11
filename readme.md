@@ -26,6 +26,8 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 
 #### Bugs/Issues/Inconsistencies
 
+***Routing query strings***
+
 The router currently doesn't deal with query strings (nor does `.htaccess`). It's a bit hacky at the moment. 
 In `index.php` I send the router down set paths for certain routes. For example:
 
@@ -58,4 +60,3 @@ about/post
 The method currently returns an object literal. Probably just a check for `empty( $post )`. Will add when default 
 views are fleshed out. Feels like bad code at the moment.
 
-**Login system error reporting** - client side errors need some work as well as how they're displayed.

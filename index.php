@@ -3,21 +3,21 @@
 require_once "./core/init.php";
 
 $uri = Request::uri();
-$requestUri = explode( "/", $uri );
 
-if ( in_array( "post", $requestUri ) ) {
+/*
+ * Fake query strings
+ */
+$uriParts = explode( "/", $uri );
+$queryPages = array( "post", "category" );
 
-    $uri = "post";
-    $requestLength = count( $requestUri );
-    $get = $requestUri[ $requestLength - 1 ];
+foreach ( $queryPages as $queryPage ) {
 
-}
+    if ( in_array( $queryPage, $uriParts ) ) {
 
-if ( in_array( "category", $requestUri ) ) {
+        $uri = $queryPage;
+        $get = $uriParts[ count( $uriParts ) - 1 ];
 
-    $uri = "category";
-    $requestLength = count( $requestUri );
-    $get = $requestUri[ $requestLength - 1 ];
+    }
 
 }
 
