@@ -114,32 +114,4 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="/assets/js/rte.js"></script>
 
-<script>
-    let form = document.querySelector( "#add-post-form" );
-    let amendedContent = false;
-    let hiddenContent = document.querySelector( "#hidden-content" );
-
-    form.addEventListener( "submit", function ( e ) {
-
-        if ( !amendedContent ) {
-
-            e.preventDefault();
-
-        } else {
-
-            return; // probably not necessary, just to make double sure the code below doesn't run twice :)
-
-        }
-
-        let editor = document.querySelector( "#quill-editor" );
-        let html = editor.children[ 0 ].innerHTML;
-
-        hiddenContent.value = html;
-        amendedContent = true;
-
-        form.submit();
-
-    });
-</script>
-
 <?php include "./partials/admin/footer.adm.partial.php"; ?>

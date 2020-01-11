@@ -19,3 +19,25 @@ var quill = new Quill( "#quill-editor", {
     theme: "snow"
 
 });
+
+let form = document.querySelector( "#add-post-form" );
+let amendedContent = false;
+let hiddenContent = document.querySelector( "#hidden-content" );
+let editor = document.querySelector( "#quill-editor" );
+
+form.addEventListener( "submit", function ( e ) {
+
+    if ( !amendedContent ) {
+
+        e.preventDefault();
+
+    }
+
+    let html = editor.children[ 0 ].innerHTML;
+
+    hiddenContent.value = html;
+    amendedContent = true;
+
+    form.submit();
+
+});
