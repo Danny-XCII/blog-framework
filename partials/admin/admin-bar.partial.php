@@ -16,7 +16,7 @@
 
             <?php endif; ?>
 
-            <a href="logout"><img src="/assets/imgs/logout.svg"></a>
+            <a href="/logout"><img src="/assets/imgs/logout.svg"></a>
 
         </span>
 
