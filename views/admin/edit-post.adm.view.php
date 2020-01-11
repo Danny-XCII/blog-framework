@@ -29,8 +29,6 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
         }
 
-        var_dump( strlen( $post->content ) );
-
         ?>
 
         <section class="admin-add-post">
@@ -55,18 +53,11 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                         <td>
 
-                            <?php
-
-                            $cat = 0;
-
-                            foreach ( $categories as $category ) : ?>
+                            <?php foreach ( $categories as $category ) : ?>
 
                                 <span class="post-category-label"><?= $category->name; ?></span> <input type="checkbox" name="categories[]" value="<?= strtolower( $category->name ); ?>" <?= in_array( strtolower( $category->name ), $post->categories ) ? "checked" : "" ?>>
-                                <?php
 
-                                $cat .= 1;
-
-                            endforeach; ?>
+                            <?php endforeach; ?>
 
                         </td>
 

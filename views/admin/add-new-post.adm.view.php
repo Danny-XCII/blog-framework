@@ -84,9 +84,7 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                         <div id="quill-editor">
 
-                            <p>Hello World!</p>
-                            <p>Some initial <strong>bold</strong> text</p>
-                            <p><br></p>
+                            <p>What will you write today?</p>
 
                         </div>
 
