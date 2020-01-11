@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * I want to rewrite this to pull settings from the database
+ * and make use of the settings page in the admin panel.
+ */
+
 $app = new stdClass();
 
 /*
@@ -13,4 +18,4 @@ $app->tagline = "My website tagline";
  *
  * Settings concerning accounts, login and registration.
  */
-$app->registrationEnabled = true;
+$app->registrationEnabled = true; // not yet in use

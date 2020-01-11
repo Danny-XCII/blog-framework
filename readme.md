@@ -46,7 +46,7 @@ if ( in_array( "post", $requestUri ) ) {
 
 If a user visits `http://mysite.com/post/my-first-post`, the final segment of the URI (`my-first-post`) is assigned
 to a variable `$get`. It is then used in the controller for the `post` endpoint to retrieve the desired post from the
-database, like so - `$database->getPostByUri( $get )`. Nothing wrong with it as far as the end user is concerned it
+database, like so - `$database->getPostByUri( $get )`. Basically faking a query string. Nothing wrong with it as far as the end user is concerned it
 doesn't really affect things - but I haven't added logic for a post or URI that doesn't exist, for example:
 
 ```
