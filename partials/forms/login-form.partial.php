@@ -1,25 +1,29 @@
-<form action="login" method="post">
+<div class="form login-form">
 
-    <table>
+    <form action="login" method="post">
 
-        <tr>
+        <table>
 
-            <td><input type="text" name="username" placeholder="username"></td>
+            <tr>
 
-        </tr>
+                <td><input type="text" name="username" placeholder="username"></td>
 
-        <tr>
+            </tr>
 
-            <td><input type="password" name="password" placeholder="password"></td>
+            <tr>
 
-        </tr>
+                <td><input type="password" name="password" placeholder="password"></td>
 
-        <tr>
+            </tr>
 
-            <td><input type="submit" value="Login"></td>
+            <tr>
 
-        </tr>
+                <td><input type="submit" value="Login"></td>
 
-    </table>
+            </tr>
 
-</form>
+        </table>
+
+    </form>
+
+</div>

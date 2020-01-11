@@ -1,37 +1,41 @@
-<form action="register" method="post">
+<div class="form register-form">
 
-    <table>
+    <form action="register" method="post">
 
-        <tr>
+        <table>
 
-            <td><input type="text" name="username" placeholder="username"></td>
+            <tr>
 
-        </tr>
+                <td><input type="text" name="username" placeholder="username"></td>
 
-        <tr>
+            </tr>
 
-            <td><input type="password" name="password" placeholder="password"></td>
+            <tr>
 
-        </tr>
+                <td><input type="password" name="password" placeholder="password"></td>
 
-        <tr>
+            </tr>
 
-            <td><input type="password" name="confirm_password" placeholder="confirm your password"></td>
+            <tr>
 
-        </tr>
+                <td><input type="password" name="confirm_password" placeholder="confirm your password"></td>
 
-        <tr>
+            </tr>
 
-            <td><input type="email" name="email" placeholder="email address"></td>
+            <tr>
 
-        </tr>
+                <td><input type="email" name="email" placeholder="email address"></td>
 
-        <tr>
+            </tr>
 
-            <td><input type="submit" value="Register"></td>
+            <tr>
 
-        </tr>
+                <td><input type="submit" value="Register"></td>
 
-    </table>
+            </tr>
 
-</form>
+        </table>
+
+    </form>
+
+</div>
