@@ -36,28 +36,18 @@ if ( $emailAddress == "" ) {
 
 if ( !isset( $username ) or !isset( $emailAddress ) or !isset( $confirmPassword ) or !isset( $password ) ) {
 
-    $errors[] = "Something went wrong.";
+    /*
+     * The user likely shouldn't ever encounter this error.
+     */
+    $errors[] = "Something went wrong. Please try again.";
 
 }
 
 if ( !isset( $errors ) ) {
 
-    $usernameExists = $database->usernameExists( $username );
-    $emailExists = $database->emailExists( $emailAddress );
+    $addUser = $database->addUser( $username, $password, $email );
 
-    if ( !$usernameExists && !$emailExists ) {
-
-        $database->addUser( $username, $password, $emailAddress );
-
-        var_dump( $database->loginUser( $username, $password ) );
-
-    } else {
-
-        if ( $usernameExists ) : $errors[] = "That username is already in use. Please choose an alternative username."; endif;
-
-        if ( $emailExists ) : $errors[] = "That email address is already associated with an account, please use an alternative email address."; endif;
-
-    }
+    if ( !$addUser ) : $errors[] = $addUser; endif;
 
 }
 

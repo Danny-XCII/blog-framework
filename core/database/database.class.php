@@ -100,12 +100,17 @@ class Database {
 
     public function addUser( $username, $password, $emailAddress ) {
 
+        if ( $this->usernameExists( $username ) ) : return "A user with that username already exists. Please choose another username and try again."; endif;
+
+        if ( $this->emailExists( $email ) ) : return "That email address is already associated with an account. Please use a different email address or sign in to your existing account."; endif;
+
         $password = password_hash( $password, PASSWORD_DEFAULT );
 
         try {
 
             $query = $this->pdo->prepare( "insert into `users` ( `username`, `password`, `email` ) values ( '{$username}', '{$password}', '{$emailAddress}' );" );
             $query->execute();
+            return true;
 
         } catch( PDOException $e ) {
 
