@@ -22,7 +22,7 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 - Login/registration system
 - Two user roles: admin and standard user
 - Admin panel
-- Add posts in the backend admin panel and view them on the front end
+- Add/edit/delete posts in the backend admin panel and view them on the front end
 - Rich text editor
 
 #### Usage
