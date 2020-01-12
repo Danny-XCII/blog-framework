@@ -6,9 +6,14 @@ global $database;
 global $get;
 
 $post = $database->getPostByUri( $get );
-$post->categories = unserialize( $post->categories );
-$post->posted_on = date( "F jS, Y", strtotime( $post->posted_on ) );
 
-$pageTitle = $post->title;
+if ( $post ) {
+
+    $post->categories = unserialize( $post->categories );
+    $post->posted_on = date( "F jS, Y", strtotime( $post->posted_on ) );
+
+    $pageTitle = $post->title;
+
+}
 
 include "./views/post.view.php";

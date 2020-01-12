@@ -1,4 +1,8 @@
-<?php include "./partials/header.partial.php"; ?>
+<?php
+
+include "./partials/header.partial.php";
+
+if ( $post ) { ?>
 
     <section class="post">
 
@@ -19,7 +23,12 @@
         </div>
 
     </section>
+    <?php
 
-<?php
+} else {
+
+    include "/views/404.view.php";
+
+}
 
 include "./partials/footer.partial.php";

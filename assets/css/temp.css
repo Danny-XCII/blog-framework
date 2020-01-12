@@ -20,3 +20,44 @@ header nav ul li {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
+
+main {
+    width: 70%;
+    margin: 1.5rem auto;
+}
+
+.post-preview img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #4d4d4d;
+}
+
+.footer-top {
+    width: 90%;
+    margin: 0 auto;
+    padding: .5rem;
+}
+
+#footer-menu {
+    list-style-type: none;
+    text-align: center;
+}
+
+#footer-menu a {
+    display: inline-block;
+    color: #fff;
+    letter-spacing: .1rem;
+    font-weight: 200;
+    transition: .4s;
+    padding: .23rem;
+    text-decoration: none;
+}
+
+#footer-menu a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff7f35;
+}

@@ -4,9 +4,9 @@
 
             <div class="footer-top">
 
-                <div class="footer-widget" id="footer-menu">
+                <div class="footer-widget">
 
-                    <ul>
+                    <ul id="footer-menu">
 
                         <?php if ( isset( $user ) ) : ?>
 
