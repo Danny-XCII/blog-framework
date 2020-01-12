@@ -61,3 +61,12 @@ footer {
     text-decoration: underline;
     text-decoration-color: #ff7f35;
 }
+
+#footer-info {
+    text-align: center;
+    font-size: .9rem;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: .05rem;
+    padding: .25rem;
+}
