@@ -37,7 +37,7 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                 <div>
 
-                    <h3><a href="/admin/posts/edit-post/<?= $post->uri; ?>"><?= $post->title; ?></a></h3>
+                    <h3 class="admin-post-preview-title"><a href="/admin/posts/edit-post/<?= $post->uri; ?>"><?= $post->title; ?></a></h3>
 
                     <p>Posted on <?= $post->posted_on; ?> by <strong><?= $post->author; ?></strong></p>
 
@@ -86,9 +86,5 @@ include "./partials/admin/admin-bar.partial.php"; ?>
     </section>
 
 </section>
-
-<script>
-    let delete
-</script>
 
 <?php include "./partials/admin/footer.adm.partial.php";

@@ -149,8 +149,13 @@ main {
     padding: .5rem;
 }
 
-.admin-post-preview h3 {
+.admin-post-preview-title {
     margin-bottom: .25rem;
+}
+
+.admin-post-preview-title a {
+    text-decoration: none;
+    color: #ee5253;
 }
 
 .admin-post-preview p {
