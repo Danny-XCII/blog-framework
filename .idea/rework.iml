@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="quill.snow" level="application" />
     <orderEntry type="library" name="quill" level="application" />
+    <orderEntry type="library" name="default" level="application" />
   </component>
 </module>

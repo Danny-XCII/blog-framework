@@ -212,7 +212,7 @@ class Database {
 
             $result = $query->fetchAll( PDO::FETCH_CLASS );
 
-            return empty( $result ) ? false : $result;
+            return empty( $result ) ? false : $result[ 0 ];
 
         } catch ( PDOException $e ) {
 

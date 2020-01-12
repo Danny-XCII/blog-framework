@@ -1,5 +1,6 @@
 # exclude everything
 content/uploads/*
+.idea/*
 
 # exception to the rule
 !content/uploads/.gitkeep
