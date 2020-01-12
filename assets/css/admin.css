@@ -208,3 +208,22 @@ main {
 #quill-editor .hljs-title {
     color: #0097e6;
 }
+
+.admin-list-post-button {
+    padding: .25rem .45rem;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    color: #fff;
+}
+
+#admin-edit-post-button {
+    background-color: #2e86de;
+}
+
+#admin-view-post-button {
+    background-color: #10ac84;
+}
+
+#admin-delete-post-button {
+    background-color: #ee5253;
+}
