@@ -43,3 +43,8 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 - 404 or "This post doesn't exist" for posts that don't exist.
 - Lots of button functionality hasn't been added yet in the admin panel.
 - Create functions to manage settings from database and have `$app` retrieve these settings - make use of the admin page for settings.
+
+**Things I need to add/work on:**
+
+- SEO
+- Ability to update post image as well as content
