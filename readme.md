@@ -49,3 +49,4 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 
 - SEO
 - Ability to update post image as well as content
+- Needs pagination

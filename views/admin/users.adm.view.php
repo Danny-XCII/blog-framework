@@ -26,6 +26,7 @@ include "./partials/admin/admin-bar.partial.php"; ?>
         <tr>
 
             <td><strong>Username</strong></td>
+            <td><strong>Email Address</strong></td>
             <td><strong>Role</strong></td>
 
         </tr>
@@ -35,6 +36,7 @@ include "./partials/admin/admin-bar.partial.php"; ?>
             <tr>
 
                 <td><?= $user->username; ?></td>
+                <td><?= $user->email; ?></td>
                 <td><?= $user->role == 1 ? "Administrator" : "Subscriber"; ?></td>
 
             </tr>
