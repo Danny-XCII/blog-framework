@@ -96,10 +96,6 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="/assets/js/rte.js"></script>
-
     <script>
         let existingContent = <?= json_encode( $post->content ); ?>;
         editor.children[ 0 ].innerHTML = existingContent;
