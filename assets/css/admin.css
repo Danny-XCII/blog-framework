@@ -225,14 +225,14 @@ main {
     margin-right: 4px;
 }
 
-#admin-edit-post-button {
+.admin-edit-post-button {
     background-color: #2e86de;
 }
 
-#admin-view-post-button {
+.admin-view-post-button {
     background-color: #10ac84;
 }
 
-#admin-delete-post-button {
+.admin-delete-post-button {
     background-color: #ee5253;
 }

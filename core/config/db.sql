@@ -39,3 +39,5 @@ insert into `post_categories` ( `name` ) values ( "Software" );
  * assign administrator status to your newly created user account.
  */
 update `users` set `role` = 1 where `username` = "Admin";
+
+select * from `users`;

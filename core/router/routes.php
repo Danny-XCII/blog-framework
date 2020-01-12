@@ -26,6 +26,7 @@ $router->get( "admin/settings", "controllers/admin/get/settings.adm.controller.p
 $router->get( "admin/posts/add-new", "controllers/admin/get/add-new-post.adm.controller.php" );
 $router->get( "admin/media", "controllers/admin/get/media.adm.controller.php" );
 $router->get( "admin/posts/edit-post", "controllers/admin/get/edit-post.adm.controller.php" );
+$router->get( "admin/posts/delete-post", "controllers/admin/get/delete-post.adm.api.php" );
 
 $router->post( "admin/posts/add-new", "controllers/admin/post/add-new-post.adm.api.php" );
 $router->post( "admin/posts/edit-post", "controllers/admin/post/edit-post.adm.api.php" );

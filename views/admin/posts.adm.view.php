@@ -58,9 +58,10 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                     <p style="margin-top: .75rem; display: grid; grid-template-columns: 1fr 1fr 1fr;">
 
-                        <a href="/admin/posts/edit-post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-edit-post-button"><img src="/assets/imgs/pencil-edit-button.svg"> Edit Post</a>
-                        <a href="/post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-view-post-button"><img src="/assets/imgs/eye.svg"> View Post</a>
-                        <a href="#" class="admin-list-post-button" id="admin-delete-post-button"><img src="/assets/imgs/delete.svg"> Delete Post</a>
+                        <a href="/admin/posts/edit-post/<?= $post->uri; ?>" class="admin-list-post-button admin-edit-post-button"><img src="/assets/imgs/pencil-edit-button.svg"> Edit Post</a>
+                        <a href="/post/<?= $post->uri; ?>" class="admin-list-post-button admin-view-post-button"><img src="/assets/imgs/eye.svg"> View Post</a>
+                        <a href="/admin/posts/delete-post/<?= $post->uri; ?>" class="admin-list-post-button admin-delete-post-button"><img src="/assets/imgs/delete.svg"> Delete Post</a>
+
 
                     </p>
 
@@ -85,5 +86,9 @@ include "./partials/admin/admin-bar.partial.php"; ?>
     </section>
 
 </section>
+
+<script>
+    let delete
+</script>
 
 <?php include "./partials/admin/footer.adm.partial.php";

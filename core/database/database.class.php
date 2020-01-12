@@ -197,7 +197,7 @@ class Database {
 
         } catch ( PDOException $e ) {
 
-            die( "Could not retrieve posts from the database." );
+            die( "Could not retrieve posts from the database.<br><br>" . $e->getMessage() );
 
         }
 
@@ -216,7 +216,22 @@ class Database {
 
         } catch ( PDOException $e ) {
 
-            die( "Couldn't retrieve the post from the database." );
+            die( "Couldn't retrieve the post from the database.<br><br>" . $e->getMessage() );
+
+        }
+
+    }
+
+    public function deletePostByUri( $uri ) {
+
+        try {
+
+            $query = $this->pdo->prepare( "delete from `posts` where `uri` = '{$uri}';" );
+            $query->execute();
+
+        } catch ( PDOException $e ) {
+
+            die( "Error attempting to delete the post from the database.<br><br>" . $e->getMessage() );
 
         }
 

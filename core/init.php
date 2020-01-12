@@ -30,7 +30,7 @@ $uri = Request::uri();
  * Fake query strings
  */
 $uriParts = explode( "/", $uri );
-$queryPages = array( "post", "category", "edit-post" );
+$queryPages = array( "post", "category", "edit-post", "delete-post" );
 
 foreach ( $queryPages as $queryPage ) {
 
