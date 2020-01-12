@@ -1,32 +1,46 @@
 <section class="post-previews">
 
-    <?php foreach ( $posts as $post ) :
+    <?php
 
-        $post->posted_on = date( "F jS, Y", strtotime( $post->posted_on ) );
-        $post->categories = isset( $noSerialize ) ? $post->categories : unserialize( $post->categories );
+    if ( !empty( $posts ) ) :
 
-        ?>
+        foreach ( $posts as $post ) :
 
-        <div class="post-preview">
+            $post->posted_on = date( "F jS, Y", strtotime( $post->posted_on ) );
+            $post->categories = isset( $noSerialize ) ? $post->categories : unserialize( $post->categories );
 
-            <a href="/post/<?= $post->uri; ?>"><img src="/content/uploads/<?= $post->image; ?>"></a>
+            ?>
 
-            <h2><a href="/post/<?= $post->uri; ?>"><?= $post->title; ?></a></h2>
+            <div class="post-preview">
 
-            <p>Posted on <?= $post->posted_on; ?> by <?= $post->author; ?></p>
+                <a href="/post/<?= $post->uri; ?>"><img src="/content/uploads/<?= $post->image; ?>"></a>
 
-            <p>
+                <h2><a href="/post/<?= $post->uri; ?>"><?= $post->title; ?></a></h2>
 
-                <?php foreach ( $post->categories as $category ) : ?>
+                <p>Posted on <?= $post->posted_on; ?> by <?= $post->author; ?></p>
 
-                    <a href="/category/<?= $category; ?>"><?= ucwords( $category ); ?></a>
+                <p>
 
-                <?php endforeach; ?>
+                    <?php foreach ( $post->categories as $category ) : ?>
 
-            </p>
+                        <a href="/category/<?= $category; ?>"><?= ucwords( $category ); ?></a>
+
+                    <?php endforeach; ?>
+
+                </p>
+
+            </div>
+
+        <?php endforeach; ?>
+
+    <?php else : ?>
+
+        <div class="no-posts">
+
+            <h3>There are no posts to display.</h3>
 
         </div>
 
-    <?php endforeach; ?>
+    <?php endif; ?>
 
 </section>

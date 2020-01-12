@@ -1,5 +1,5 @@
 <?php include "./partials/header.partial.php"; ?>
 
-<p>Page Not Found</p>
+<h3>Page Not Found</h3>
 
 <?php include "./partials/footer.partial.php"; ?>
