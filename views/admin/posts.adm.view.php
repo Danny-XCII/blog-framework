@@ -37,7 +37,7 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                 <div>
 
-                    <h3><a href="/admin/posts/edit-post?p=<?= $post->uri; ?>"><?= $post->title; ?></a></h3>
+                    <h3><a href="/admin/posts/edit-post/<?= $post->uri; ?>"><?= $post->title; ?></a></h3>
 
                     <p>Posted on <?= $post->posted_on; ?> by <strong><?= $post->author; ?></strong></p>
 
@@ -58,7 +58,7 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                     <p style="margin-top: .75rem;">
 
-                        <a href="/admin/posts/edit-post?p=<?= $post->uri; ?>" class="admin-list-post-button" id="admin-edit-post-button">Edit Post</a>
+                        <a href="/admin/posts/edit-post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-edit-post-button">Edit Post</a>
                         <a href="/post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-view-post-button">View Post</a>
                         <a href="#" class="admin-list-post-button" id="admin-delete-post-button">Delete Post</a>
 

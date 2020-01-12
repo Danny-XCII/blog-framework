@@ -8,14 +8,23 @@ $uri = Request::uri();
  * Fake query strings
  */
 $uriParts = explode( "/", $uri );
-$queryPages = array( "post", "category" );
+$queryPages = array( "post", "category", "edit-post" );
 
 foreach ( $queryPages as $queryPage ) {
 
     if ( in_array( $queryPage, $uriParts ) ) {
 
-        $uri = $queryPage;
         $get = $uriParts[ count( $uriParts ) - 1 ];
+        array_pop( $uriParts );
+        $uri = "";
+
+        for ( $i = 0; $i < ( count( $uriParts ) ); $i++ ) {
+
+            $uri .= $uriParts[ $i ] . "/";
+
+        }
+
+        $uri = trim( $uri, "/" );
 
     }
 

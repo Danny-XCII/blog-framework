@@ -13,7 +13,7 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 
 ***
 
-### Main Features/Highlights
+#### Main Features/Highlights
 
 - Pretty URL's (mostly)
 - PHP `Router`
@@ -25,7 +25,7 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 - Add posts in the backend admin panel and view them on the front end
 - Rich text editor
 
-### Usage
+#### Usage
 
 - Upload the project to `public_html` or `www`
 - Insert database settings into `core/config/database.config.php`
@@ -38,50 +38,8 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 
 #### Bugs/Issues/Inconsistencies
 
-***Routing query strings***
-
-The router currently doesn't deal with query strings (nor does `.htaccess`). It's a bit hacky at the moment. 
-In `index.php` I send the router down set paths for certain routes, like so:
-
-```php
-/*
- * Fake query strings
- */
-$uriParts = explode( "/", $uri );
-$queryPages = array( "post", "category" );
-
-foreach ( $queryPages as $queryPage ) {
-
-    if ( in_array( $queryPage, $uriParts ) ) {
-
-        $uri = $queryPage;
-        $get = $uriParts[ count( $uriParts ) - 1 ];
-
-    }
-
-}
-
-Router::create( "./core/router/routes.php" )->direct( $uri, Request::method() );
-```
-
-If a user visits `http://mysite.com/post/my-first-post`, the final segment of the URI (`my-first-post`) is assigned
-to a variable `$get`. It is then used in the controller for the `post` endpoint to retrieve the desired post from the
-database, like so - `$database->getPostByUri( $get )`. Basically faking a query string. Nothing wrong with it as far as the end user is concerned it
-doesn't really affect things - but I haven't added logic for a post or URI that doesn't exist, for example:
-
-```
-post/my-post/my-post
-my-post/post
-about/post
-``` 
-
-The method currently returns an object literal. Probably just a check for `empty( $post )`. Will add when default 
-views are fleshed out. Feels like bad code at the moment.
-
 **List of stuff I need to fix:**
 
 - 404 or "This post doesn't exist" for posts that don't exist.
-- Query string routing. But it's cleaner than it was.
 - Lots of button functionality hasn't been added yet in the admin panel.
 - Create functions to manage settings from database and have `$app` retrieve these settings - make use of the admin page for settings.
-- ***ANYTHING ELSE THAT IS EMPTY OR NON-WORKING LINKS ETC ARE STUFF I'M WORKING ON STILL***

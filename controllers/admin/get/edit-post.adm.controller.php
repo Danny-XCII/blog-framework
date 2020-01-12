@@ -3,6 +3,7 @@
 global $app;
 global $user;
 global $database;
+global $get;
 
 $categories = $database->getAllCategories();
 
@@ -10,7 +11,7 @@ $pageTitle = "Edit Post";
 $requiresQuill = true;
 $adminPage = true;
 
-$post = $database->getPostByUri( Request::get( "p" ) );
+$post = $database->getPostByUri( $get );
 $post->categories = unserialize( $post->categories );
 
 include "./core/admin.init.php";
