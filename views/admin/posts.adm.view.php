@@ -56,11 +56,11 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                     </p>
 
-                    <p style="margin-top: .75rem;">
+                    <p style="margin-top: .75rem; display: grid; grid-template-columns: 1fr 1fr 1fr;">
 
-                        <a href="/admin/posts/edit-post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-edit-post-button">Edit Post</a>
-                        <a href="/post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-view-post-button">View Post</a>
-                        <a href="#" class="admin-list-post-button" id="admin-delete-post-button">Delete Post</a>
+                        <a href="/admin/posts/edit-post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-edit-post-button"><img src="/assets/imgs/pencil-edit-button.svg"> Edit Post</a>
+                        <a href="/post/<?= $post->uri; ?>" class="admin-list-post-button" id="admin-view-post-button"><img src="/assets/imgs/eye.svg"> View Post</a>
+                        <a href="#" class="admin-list-post-button" id="admin-delete-post-button"><img src="/assets/imgs/delete.svg"> Delete Post</a>
 
                     </p>
 

@@ -214,6 +214,15 @@ main {
     border-radius: 5px;
     border: 1px solid #ebebeb;
     color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.admin-list-post-button img {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
 }
 
 #admin-edit-post-button {
