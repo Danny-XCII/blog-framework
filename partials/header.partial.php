@@ -6,6 +6,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
+        <meta name="description" content="<?= $pageDescription; ?>">
+
         <title><?= $app->name; ?> | <?= $pageTitle; ?></title>
 
         <link rel="stylesheet" type="text/css" href="/assets/css/base.css">

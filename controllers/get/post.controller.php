@@ -13,6 +13,11 @@ if ( $post ) {
     $post->posted_on = date( "F jS, Y", strtotime( $post->posted_on ) );
 
     $pageTitle = $post->title;
+    $pageDescription = $post->meta_description;
+
+} else {
+
+    $pageDescription = "Post not found.";
 
 }
 

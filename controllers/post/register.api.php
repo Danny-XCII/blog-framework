@@ -45,7 +45,7 @@ if ( !isset( $username ) or !isset( $emailAddress ) or !isset( $confirmPassword 
 
 if ( !isset( $errors ) ) {
 
-    $addUser = $database->addUser( $username, $password, $email );
+    $addUser = $database->addUser( $username, $password, $emailAddress );
 
     if ( !$addUser ) : $errors[] = $addUser; endif;
 

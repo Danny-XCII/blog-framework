@@ -9,6 +9,7 @@ $category = htmlspecialchars( $get );
 $pageTitle = ucfirst( $category );
 
 $posts = $database->getAllPosts();
+$pageDescription = "My category.";
 
 $categoryPosts = array();
 
