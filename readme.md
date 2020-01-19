@@ -33,7 +33,8 @@ in the admin panel don't do anything at the moment. Will need some optimisation 
 - Navigate to your site in the browser and head to the registration page (`/register`) and register a new account
 - Execute the final line of `core/config.db.sql` to give administrator rights to your new account
 - Use the admin panel to add posts
-- Delete `assets/css/temp.css` for default front end styling (basically none)
+- Delete `assets/css/temp.css` for default front end styling (basically none) - and remove the reference to the file
+inside `partials/header.partial.php`
 
 *Some buttons and links in the admin panel don't do anything yet.*
 
