@@ -51,6 +51,12 @@ include "./partials/admin/admin-bar.partial.php"; ?>
 
                     <tr>
 
+                        <td><textarea name="meta_description" placeholder="Meta description"><?= $post->meta_description; ?></textarea></td>
+
+                    </tr>
+
+                    <tr>
+
                         <td>
 
                             <?php foreach ( $categories as $category ) : ?>

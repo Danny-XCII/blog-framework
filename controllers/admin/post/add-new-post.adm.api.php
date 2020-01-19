@@ -50,8 +50,9 @@ if ( Request::method() == "POST" ) {
         $uri = Request::post( "uri" );
         $content = Request::post( "content" );
         $categories = serialize( Request::post( "categories" ) );
+        $metaDescription = Request::post( "meta_description" );
 
-        if ( $database->addPost( $title, $uri, $image, $categories, $content, $user->username ) ) {
+        if ( $database->addPost( $title, $uri, $image, $categories, $content, $user->username, $metaDescription ) ) {
 
             header( "Location:/admin/posts" );
 

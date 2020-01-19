@@ -154,11 +154,11 @@ class Database {
 
     }
 
-    public function addPost( $title, $uri, $image, $categories, $content, $author ) {
+    public function addPost( $title, $uri, $image, $categories, $content, $author, $metaDescription ) {
 
         try {
 
-            $query = $this->pdo->prepare( "insert into `posts` ( `title`, `uri`, `image`, `categories`, `content`, `author` ) values ( '{$title}', '{$uri}', '{$image}', '{$categories}', '{$content}', '{$author}' );" );
+            $query = $this->pdo->prepare( "insert into `posts` ( `title`, `uri`, `image`, `categories`, `content`, `author`, `meta_description` ) values ( '{$title}', '{$uri}', '{$image}', '{$categories}', '{$content}', '{$author}', '{$metaDescription}' );" );
             $query->execute();
             return true;
 
@@ -170,11 +170,11 @@ class Database {
 
     }
 
-    public function updatePost( $title, $uri, $categories, $content, $currentUri ) {
+    public function updatePost( $title, $uri, $categories, $content, $currentUri, $metaDescription ) {
 
         try {
 
-            $query = $this->pdo->prepare( "update `posts` set `title` = '{$title}', `uri` = '{$uri}', `categories` = '{$categories}', `content` = '{$content}' where `uri` = '{$currentUri}';" );
+            $query = $this->pdo->prepare( "update `posts` set `title` = '{$title}', `uri` = '{$uri}', `categories` = '{$categories}', `content` = '{$content}', `meta_description` = '{$metaDescription}' where `uri` = '{$currentUri}';" );
             $query->execute();
             return true;
 

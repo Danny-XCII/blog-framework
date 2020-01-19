@@ -91,12 +91,20 @@ main {
     color: #4d4d4d;
     align-items: center;
 }
-
+.admin-page {
+    font-family: "Montserrat", sans-serif;
+}
 .admin-page form input[type="file"],
-.admin-page form input[type="text"] {
+.admin-page form input[type="text"],
+.admin-page textarea {
     width: 100%;
     border: 1px solid #ccc;
     padding: .5rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.admin-page textarea {
+    resize: none;
 }
 
 .admin-add-post table {

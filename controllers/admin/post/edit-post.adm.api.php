@@ -44,8 +44,9 @@ if ( Request::method() == "POST" ) {
         $content = Request::post( "content" );
        // var_dump( htmlspecialchars( $content ) );
         $categories = serialize( Request::post( "categories" ) );
+        $metaDescription = Request::post( "meta_description" );
 
-        if ( $database->updatePost( $title, $uri, $categories, $content, Request::post( "current_uri" ) ) ) {
+        if ( $database->updatePost( $title, $uri, $categories, $content, Request::post( "current_uri" ), $metaDescription ) ) {
 
             header( "Location:/admin/posts" );
 
